@@ -353,6 +353,7 @@ TEST_DECLARE   (fs_fd_hash)
 #endif
 TEST_DECLARE   (fs_utime)
 TEST_DECLARE   (fs_futime)
+TEST_DECLARE   (fs_lutime)
 TEST_DECLARE   (fs_file_open_append)
 TEST_DECLARE   (fs_statfs)
 TEST_DECLARE   (fs_stat_missing_path)
@@ -471,6 +472,7 @@ TEST_DECLARE   (we_get_signal_one_shot)
 TEST_DECLARE   (we_get_signals_mixed)
 TEST_DECLARE   (signal_multiple_loops)
 TEST_DECLARE   (signal_pending_on_close)
+TEST_DECLARE   (signal_close_loop_alive)
 TEST_DECLARE   (closed_fd_events)
 #endif
 #ifdef __APPLE__
@@ -937,6 +939,7 @@ TASK_LIST_START
   TEST_ENTRY  (we_get_signals_mixed)
   TEST_ENTRY  (signal_multiple_loops)
   TEST_ENTRY  (signal_pending_on_close)
+  TEST_ENTRY  (signal_close_loop_alive)
   TEST_ENTRY  (closed_fd_events)
 #endif
 
@@ -967,6 +970,7 @@ TASK_LIST_START
   TEST_ENTRY  (fs_chown)
   TEST_ENTRY  (fs_utime)
   TEST_ENTRY  (fs_futime)
+  TEST_ENTRY  (fs_lutime)
   TEST_ENTRY  (fs_readlink)
   TEST_ENTRY  (fs_realpath)
   TEST_ENTRY  (fs_symlink)
